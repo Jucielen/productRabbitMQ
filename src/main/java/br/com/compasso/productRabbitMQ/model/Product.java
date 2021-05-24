@@ -1,22 +1,22 @@
 package br.com.compasso.productRabbitMQ.model;
 
-import br.com.compasso.productRabbitMQ.dto.Order;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@Entity
 public class Product {
-	
-	private String id;
+	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String name;
 	private String description;
 	private double price;
-	/*
+	
 	public Product() {
 	}
 	public Product(String name, String description, double price) {
@@ -24,10 +24,10 @@ public class Product {
 		this.description = description;
 		this.price = price;
 	}
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -49,6 +49,5 @@ public class Product {
 		this.price = price;
 	}
 	
-	*/
+	
 }
-

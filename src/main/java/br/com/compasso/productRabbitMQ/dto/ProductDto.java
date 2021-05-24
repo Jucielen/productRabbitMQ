@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import br.com.compasso.productRabbitMQ.model.Product;
 
 public class ProductDto {
-	private String id;
+	private Long id;
 	private String name;
 	private String description;
 	private String price;
@@ -21,10 +21,10 @@ public class ProductDto {
 		this.price = Double.toString(product.getPrice());
 	}
 	
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {

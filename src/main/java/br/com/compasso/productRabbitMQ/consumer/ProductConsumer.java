@@ -19,6 +19,5 @@ public class ProductConsumer {
     public void consumeMessageFromQueue(Product prod) {
     	prod.setName(prod.getName()+" RabbitMQ");
     	repository.save(prod);
-        System.out.println("Message recieved from queue : " + prod);
     }
 }

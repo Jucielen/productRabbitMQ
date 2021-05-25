@@ -16,9 +16,9 @@ import org.springframework.amqp.core.Queue;
 @Configuration
 public class MessagingConfig {
 
-    public static final String QUEUE = "javatechie_queue";
-    public static final String EXCHANGE = "javatechie_exchange";
-    public static final String ROUTING_KEY = "javatechie_routingKey";
+    public static final String QUEUE = "queue";
+    public static final String EXCHANGE = "default";
+    public static final String ROUTING_KEY = "routingKey";
 
     @Bean
     public Queue queue() {

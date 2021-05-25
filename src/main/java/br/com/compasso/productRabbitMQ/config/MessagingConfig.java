@@ -17,12 +17,12 @@ import org.springframework.amqp.core.Queue;
 public class MessagingConfig {
 
     public static final String QUEUE = "queue";
-    public static final String EXCHANGE = "default";
+    public static final String EXCHANGE = "exchange";
     public static final String ROUTING_KEY = "routingKey";
 
     @Bean
     public Queue queue() {
-        return new Queue(QUEUE);
+        return new Queue(QUEUE,true);
     }
 
     @Bean

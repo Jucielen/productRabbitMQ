@@ -15,4 +15,5 @@ public class ProductPublisher {
 	public void send(Product prod) {
 		template.convertAndSend(MessagingConfig.EXCHANGE,MessagingConfig.ROUTING_KEY, prod);
 	}
+	
 }
